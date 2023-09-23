@@ -1,5 +1,7 @@
 # react-agent-amazon-exhibit99.1
-Analyzing Amazon's recent disclosures and attitudes towards LLMs with LlamaIndex's ReAct Agent and Cybersyn data from Snowflake Marketplace
+Analyzing Amazon's recent disclosures and attitudes towards LLMs with LlamaIndex's ReAct Agent and Cybersyn data from Snowflake Marketplace.
+
+Check out my Medium blog post for details. [Exploring ReAct Agent for Better Prompting in RAG Pipeline](https://betterprogramming.pub/exploring-react-agent-for-better-prompting-in-rag-pipeline-b231aae0ca7c?sk=214e6ff6af6aff178c30e804a8a5664d).
 
 ## Application Setup
 
