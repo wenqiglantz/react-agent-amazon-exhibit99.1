@@ -22,22 +22,6 @@ logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
 llm = OpenAI(temperature=0, model="gpt-3.5-turbo-0613")
 service_context = ServiceContext.from_defaults(llm=llm)
 
-# Amazon's recent disclosures and attitudes toward large language models
-# sql_query = '''
-# SELECT
-#     companies.company_name,
-#     companies.sic_code_category,
-#     companies.country,
-#     txt.period_end_date,
-#     txt.value 
-# FROM cybersyn.sec_report_text_attributes AS txt
-# JOIN cybersyn.sec_cik_index AS companies ON (companies.cik = txt.cik)
-# WHERE txt.period_end_date >= '2023-01-01'
-#   AND value ILIKE '%large language model%'
-#   AND value ILIKE '%Exhibit 99.1%'
-#   AND companies.company_name = 'AMAZON COM INC';
-# '''
-
 # function to query db
 def db_querying():
     sql_query = st.text_area("Enter your database query here")
@@ -91,13 +75,3 @@ if react_agent is not None:
     if question:
         response = react_agent.chat(question)
         st.write("Response:", response)
-
-# response = react_agent.chat(
-#     "Can you compare and contrast what each exhibit 99.1 tool talked about large language model and give me the one which talked about bedrock?"
-# )
-# st.write("Response:", response)
-
-# How much did Amazon invest in developments related to large language model?
-#Can you compare and contrast what each exhibit 99.1 tool talked about the investments Amazon made in developments related to large language models?
-
-# Can you compare and contrast what each exhibit 99.1 tool talked about the large language model development investments Amazon made?
